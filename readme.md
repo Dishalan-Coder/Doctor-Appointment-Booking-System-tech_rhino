@@ -12,8 +12,9 @@ A full-stack web application for booking doctor appointments.
 ### Backend
 ```bash
 cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+python3 -m pip install -r requirements.txt 
+python3 -m app.seed.seed_data 
+python3 -m uvicorn app.main:app --reload --port 8000
 ```
 
 ### Frontend
