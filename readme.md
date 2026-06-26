@@ -5,7 +5,7 @@ A full-stack web application for booking doctor appointments.
 ## Stack
 - **Frontend**: React + Vite
 - **Backend**: FastAPI (Python)
-- **Database**: PostgreSQL (or SQLite for dev)
+- **Database**: MySql
 
 ## Getting Started
 
