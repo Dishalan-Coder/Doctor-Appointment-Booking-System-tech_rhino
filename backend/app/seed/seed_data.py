@@ -1,3 +1,4 @@
+# Run this script to populate the database with sample data
 """
 Utility script to seed the database.
 Run: python -m app.seed.seed_data
