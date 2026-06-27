@@ -1,6 +1,4 @@
-/**
- * 简单的认证页面导航栏 - 用于登录/注册页面
- */
+// Simple authentication page navigation bar – for login/register pages.
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 

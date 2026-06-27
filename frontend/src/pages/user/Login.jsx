@@ -1,6 +1,4 @@
-/**
- * 患者登录页
- */
+
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginPatient } from '../../services/authService';
@@ -15,7 +13,7 @@ export default function Login() {
   const [error, setError] = useState('');
   const [form, setForm] = useState({ email: '', password: '' });
 
-  // 已登录则跳转
+  
   if (isPatientLoggedIn) {
     navigate('/');
     return null;

@@ -1,6 +1,4 @@
-/**
- * 管理端仪表盘
- */
+
 import { useState, useEffect } from 'react';
 import axiosInstance from '../../services/axiosInstance';
 import { getAllAppointments } from '../../services/appointmentService';
@@ -41,7 +39,6 @@ export default function Dashboard() {
         <p className="text-gray-500 mt-1">Overview of your hospital management system</p>
       </div>
 
-      {/* 统计卡片 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
         {statCards.map((card) => (
           <div key={card.key} className="card p-5">
@@ -60,7 +57,6 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* 待处理和今日预约 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-8">
         <div className="card p-5">
           <div className="flex items-center gap-3 mb-4">
@@ -98,7 +94,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* 最近预约 */}
       <div className="card p-5">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-gray-900">Recent Appointments</h2>

@@ -1,6 +1,4 @@
-/**
- * 医生登录页
- */
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginDoctor } from '../../services/authService';

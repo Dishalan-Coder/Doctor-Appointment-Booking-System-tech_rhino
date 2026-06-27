@@ -1,6 +1,4 @@
-/**
- * 科室卡片组件
- */
+
 import { Link } from 'react-router-dom';
 import {
   Heart, Brain, Bone, Baby, Scan, Eye,
@@ -13,7 +11,7 @@ const iconMap = {
   ribbon: Ribbon, smile: Smile
 };
 
-// 不同科室的配色方案
+
 const colorSchemes = [
   'from-rose-50 to-rose-100 text-rose-600',
   'from-violet-50 to-violet-100 text-violet-600',

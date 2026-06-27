@@ -1,6 +1,4 @@
-/**
- * 医生详情页
- */
+
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getDoctorById } from '../../services/doctorService';
@@ -27,7 +25,7 @@ export default function DoctorDetails() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  // 当日期改变时获取可用时间段
+
   useEffect(() => {
     if (!selectedDate) {
       setSlots([]);
@@ -72,13 +70,13 @@ export default function DoctorDetails() {
 
   return (
     <div className="page-container">
-      {/* 返回链接 */}
+      
       <Link to="/doctors" className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-primary-600 mb-6 transition-colors">
         <ArrowLeft className="w-4 h-4" /> Back to Doctors
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* 左侧：医生信息 */}
+        
         <div className="lg:col-span-2 space-y-6">
           <div className="card p-6">
             <div className="flex flex-col sm:flex-row items-start gap-5">
@@ -105,13 +103,13 @@ export default function DoctorDetails() {
             </div>
           </div>
 
-          {/* 详细信息 */}
+          
           <div className="card p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-3">About</h2>
             <p className="text-gray-600 leading-relaxed">{doctor.bio || 'No bio available.'}</p>
           </div>
 
-          {/* 可用时间 */}
+          
           <div className="card p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Clock className="w-5 h-5 text-primary-600" /> Availability
@@ -136,14 +134,14 @@ export default function DoctorDetails() {
           </div>
         </div>
 
-        {/* 右侧：预约面板 */}
+        
         <div className="lg:col-span-1">
           <div className="card p-6 sticky top-20">
             <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Calendar className="w-5 h-5 text-primary-600" /> Book Appointment
             </h2>
 
-            {/* 日期选择 */}
+            
             <div className="mb-4">
               <label className="form-label">Select Date</label>
               <input
@@ -156,7 +154,7 @@ export default function DoctorDetails() {
               />
             </div>
 
-            {/* 可用时间段 */}
+            
             {selectedDate && (
               <div className="mb-4">
                 <label className="form-label">Available Time Slots</label>

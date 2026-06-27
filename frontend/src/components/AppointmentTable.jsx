@@ -1,6 +1,4 @@
-/**
- * 预约表格组件 - 管理端和用户端通用
- */
+
 import { formatDateShort, formatTime } from '../utils/formatDate';
 import { STATUS_COLORS } from '../utils/constants';
 import { Eye, Check, X, Clock } from 'lucide-react';

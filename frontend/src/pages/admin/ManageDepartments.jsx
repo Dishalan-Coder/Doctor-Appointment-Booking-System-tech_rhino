@@ -1,6 +1,4 @@
-/**
- * 管理端 - 科室管理
- */
+
 import { useState, useEffect } from 'react';
 import { getDepartments, createDepartment, updateDepartment, deleteDepartment } from '../../services/departmentService';
 import { Building2, Plus, Pencil, Trash2, X, Check } from 'lucide-react';
@@ -17,7 +15,6 @@ export default function ManageDepartments() {
 
   const fetchDepartments = () => {
     setLoading(true);
-    // 获取全部科室（包括非活跃的）
     getDepartments().then(res => setDepartments(res.data || []))
       .catch(() => {}).finally(() => setLoading(false));
   };
@@ -77,7 +74,6 @@ export default function ManageDepartments() {
         </button>
       </div>
 
-      {/* 创建/编辑表单 */}
       {showForm && (
         <div className="card p-6 mb-6 animate-fade-in-up border-2 border-primary-200">
           <div className="flex items-center justify-between mb-4">
@@ -133,7 +129,6 @@ export default function ManageDepartments() {
         </div>
       )}
 
-      {/* 科室列表 */}
       <div className="card overflow-hidden">
         {loading ? (
           <div className="p-6 space-y-3">

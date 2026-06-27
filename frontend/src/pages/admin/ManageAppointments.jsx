@@ -1,6 +1,4 @@
-/**
- * 管理端 - 预约管理
- */
+
 import { useState, useEffect } from 'react';
 import { getAllAppointments, updateAppointmentStatus } from '../../services/appointmentService';
 import AppointmentTable from '../../components/AppointmentTable';

@@ -1,6 +1,4 @@
-/**
- * 管理端 - 患者管理
- */
+
 import { useState, useEffect } from 'react';
 import { getAllPatients } from '../../services/patientService';
 import { Users, Search } from 'lucide-react';

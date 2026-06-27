@@ -1,6 +1,4 @@
-/**
- * 管理员登录页
- */
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginAdmin } from '../../services/authService';

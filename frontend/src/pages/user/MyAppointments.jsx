@@ -1,6 +1,4 @@
-/**
- * 我的预约列表页
- */
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getMyAppointments, cancelAppointment } from '../../services/appointmentService';
@@ -36,7 +34,7 @@ export default function MyAppointments() {
 
   return (
     <div className="page-container">
-      {/* 标题 */}
+      
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
@@ -52,7 +50,7 @@ export default function MyAppointments() {
         </Link>
       </div>
 
-      {/* 筛选栏 */}
+      
       <div className="card p-4 mb-6">
         <div className="flex items-center gap-3">
           <Filter className="w-4 h-4 text-gray-400" />
@@ -75,7 +73,7 @@ export default function MyAppointments() {
         </div>
       </div>
 
-      {/* 预约表格 */}
+     
       <div className="card p-4">
         {loading ? (
           <div className="py-12 text-center text-gray-400">

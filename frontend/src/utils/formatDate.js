@@ -1,8 +1,4 @@
-/**
- * 日期格式化工具函数
- */
 
-/** 格式化日期为可读字符串 */
 export function formatDate(dateStr) {
   if (!dateStr) return '';
   const date = new Date(dateStr);
@@ -13,7 +9,6 @@ export function formatDate(dateStr) {
   });
 }
 
-/** 格式化日期为短格式 */
 export function formatDateShort(dateStr) {
   if (!dateStr) return '';
   const date = new Date(dateStr);
@@ -24,7 +19,6 @@ export function formatDateShort(dateStr) {
   });
 }
 
-/** 格式化时间为 12 小时制 */
 export function formatTime(timeStr) {
   if (!timeStr) return '';
   const [hours, minutes] = timeStr.split(':').map(Number);
@@ -33,29 +27,24 @@ export function formatTime(timeStr) {
   return `${displayHours}:${String(minutes).padStart(2, '0')} ${period}`;
 }
 
-/** 获取今天的日期字符串 YYYY-MM-DD */
 export function getTodayString() {
   return new Date().toISOString().split('T')[0];
 }
 
-/** 获取最小可选日期（今天） */
 export function getMinDate() {
   return getTodayString();
 }
 
-/** 获取最大可选日期（3个月后） */
 export function getMaxDate() {
   const d = new Date();
   d.setMonth(d.getMonth() + 3);
   return d.toISOString().split('T')[0];
 }
 
-/** 检查日期是否是今天 */
 export function isToday(dateStr) {
   return dateStr === getTodayString();
 }
 
-/** 计算相对时间 */
 export function timeAgo(dateStr) {
   const now = new Date();
   const date = new Date(dateStr);

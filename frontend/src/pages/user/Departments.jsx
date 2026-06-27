@@ -1,6 +1,4 @@
-/**
- * 科室列表页
- */
+
 import { useState, useEffect } from 'react';
 import { getDepartments } from '../../services/departmentService';
 import DepartmentCard from '../../components/DepartmentCard';
@@ -20,7 +18,7 @@ export default function Departments() {
 
   return (
     <div className="page-container">
-      {/* 页面标题 */}
+      
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
@@ -33,7 +31,7 @@ export default function Departments() {
         </p>
       </div>
 
-      {/* 加载状态 */}
+      
       {loading ? (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {[...Array(10)].map((_, i) => (

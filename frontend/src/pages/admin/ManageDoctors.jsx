@@ -1,6 +1,3 @@
-/**
- * 管理端 - 医生管理
- */
 import { useState, useEffect } from 'react';
 import { getDoctors, createDoctor, updateDoctor, deleteDoctor } from '../../services/doctorService';
 import { getDepartments } from '../../services/departmentService';

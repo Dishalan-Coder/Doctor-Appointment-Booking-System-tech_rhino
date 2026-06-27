@@ -1,6 +1,4 @@
-/**
- * 页脚组件
- */
+
 import { Stethoscope, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +7,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* 品牌 */}
+          
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 bg-primary-600 rounded-xl flex items-center justify-center">
@@ -24,7 +22,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* 快速链接 */}
+          
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2.5 text-sm">
@@ -37,7 +35,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 科室 */}
+         
           <div>
             <h4 className="text-white font-semibold mb-4">Departments</h4>
             <ul className="space-y-2.5 text-sm">
@@ -49,7 +47,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 联系信息 */}
+         
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">

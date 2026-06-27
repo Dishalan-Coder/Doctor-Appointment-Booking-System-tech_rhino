@@ -1,6 +1,4 @@
-/**
- * 首页 - 包含 Hero、科室展示、热门医生
- */
+
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getDepartments } from '../../services/departmentService';
@@ -32,7 +30,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero 区域 */}
+      
       <section className="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-700 to-teal-600">
         <div className="hero-pattern absolute inset-0 opacity-30" />
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary-400/20 rounded-full blur-3xl" />
@@ -52,7 +50,7 @@ export default function Home() {
               Find the right specialist, choose your preferred time, and book an appointment in just a few clicks. Your health, our priority.
             </p>
 
-            {/* 搜索框 */}
+            
             <form onSubmit={handleSearch} className="flex gap-2 max-w-lg">
               <div className="flex-1 relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -73,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 统计数据条 */}
+      
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -97,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 科室展示 */}
+      
       <section className="page-container">
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -120,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 热门医生 */}
+      
       <section className="page-container">
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -138,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA 区域 */}
+      
       <section className="bg-gradient-to-r from-primary-600 to-teal-600 my-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-3">

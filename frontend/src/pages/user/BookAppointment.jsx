@@ -1,6 +1,4 @@
-/**
- * 预约确认页
- */
+
 import { useState, useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { getDoctorById } from '../../services/doctorService';
@@ -96,7 +94,7 @@ export default function BookAppointment() {
         </div>
       )}
 
-      {/* 预约摘要 */}
+      
       <div className="card p-6 mb-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Appointment Details</h2>
         <div className="space-y-4">
@@ -133,7 +131,6 @@ export default function BookAppointment() {
         </div>
       </div>
 
-      {/* 就诊原因 */}
       <div className="card p-6 mb-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-3">Reason for Visit (Optional)</h2>
         <textarea
@@ -145,7 +142,6 @@ export default function BookAppointment() {
         />
       </div>
 
-      {/* 确认按钮 */}
       <button
         onClick={handleConfirm}
         disabled={loading}

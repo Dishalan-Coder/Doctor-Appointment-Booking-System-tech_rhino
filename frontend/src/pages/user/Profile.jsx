@@ -1,6 +1,4 @@
-/**
- * 用户个人资料页
- */
+
 import { useState, useEffect } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import axiosInstance from '../../services/axiosInstance';
@@ -59,7 +57,7 @@ export default function Profile() {
       </div>
 
       <div className="card p-6">
-        {/* 头像区 */}
+        
         <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
           <div className="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center">
             <span className="text-3xl font-display font-bold text-primary-700">

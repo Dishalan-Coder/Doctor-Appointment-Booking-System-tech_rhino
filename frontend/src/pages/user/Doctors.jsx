@@ -1,6 +1,4 @@
-/**
- * 医生列表页 - 支持搜索和科室筛选
- */
+
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getDoctors } from '../../services/doctorService';
@@ -56,7 +54,7 @@ export default function Doctors() {
 
   return (
     <div className="page-container">
-      {/* 标题 */}
+      
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center">
@@ -69,7 +67,7 @@ export default function Doctors() {
         </p>
       </div>
 
-      {/* 搜索和筛选栏 */}
+      
       <div className="card p-4 mb-6">
         <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
           <div className="flex-1 relative">
@@ -105,14 +103,14 @@ export default function Doctors() {
         </form>
       </div>
 
-      {/* 结果计数 */}
+      
       <p className="text-sm text-gray-500 mb-4">
         Showing {doctors.length} doctor{doctors.length !== 1 ? 's' : ''}
         {selectedDept && ` in ${departments.find(d => d.id === Number(selectedDept))?.name || ''}`}
         {search && ` matching "${search}"`}
       </p>
 
-      {/* 医生列表 */}
+      
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {[...Array(6)].map((_, i) => (

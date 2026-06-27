@@ -1,6 +1,4 @@
-/**
- * 患者注册页
- */
+
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { registerPatient } from '../../services/authService';

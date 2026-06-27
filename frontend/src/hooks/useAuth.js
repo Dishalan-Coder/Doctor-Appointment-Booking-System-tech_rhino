@@ -1,6 +1,4 @@
-/**
- * 自定义 Hook：便捷访问 AuthContext
- */
+
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 

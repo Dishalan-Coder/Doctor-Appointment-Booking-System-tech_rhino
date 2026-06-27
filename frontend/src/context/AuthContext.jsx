@@ -1,6 +1,4 @@
-/**
- * 认证上下文 - 管理患者、医生和管理员的登录状态
- */
+
 import { createContext, useState, useEffect } from 'react';
 
 export const AuthContext = createContext(null);
@@ -14,7 +12,6 @@ export function AuthProvider({ children }) {
   const [adminToken, setAdminToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // 初始化：从 localStorage 恢复状态
   useEffect(() => {
     try {
       const savedPatient = localStorage.getItem('patient_data');
@@ -42,7 +39,6 @@ export function AuthProvider({ children }) {
     setLoading(false);
   }, []);
 
-  /** 患者登录 */
   const loginAsPatient = (token, patientData) => {
     localStorage.setItem('patient_token', token);
     localStorage.setItem('patient_data', JSON.stringify(patientData));
@@ -50,7 +46,6 @@ export function AuthProvider({ children }) {
     setPatient(patientData);
   };
 
-  /** 患者登出 */
   const logoutPatient = () => {
     localStorage.removeItem('patient_token');
     localStorage.removeItem('patient_data');
@@ -58,7 +53,6 @@ export function AuthProvider({ children }) {
     setPatient(null);
   };
 
-  /** 医生登录 */
   const loginAsDoctor = (token, doctorData) => {
     localStorage.setItem('doctor_token', token);
     localStorage.setItem('doctor_data', JSON.stringify(doctorData));
@@ -66,7 +60,6 @@ export function AuthProvider({ children }) {
     setDoctor(doctorData);
   };
 
-  /** 医生登出 */
   const logoutDoctor = () => {
     localStorage.removeItem('doctor_token');
     localStorage.removeItem('doctor_data');
@@ -74,7 +67,6 @@ export function AuthProvider({ children }) {
     setDoctor(null);
   };
 
-  /** 管理员登录 */
   const loginAsAdmin = (token, adminData) => {
     localStorage.setItem('admin_token', token);
     localStorage.setItem('admin_data', JSON.stringify(adminData));
@@ -82,7 +74,6 @@ export function AuthProvider({ children }) {
     setAdmin(adminData);
   };
 
-  /** 管理员登出 */
   const logoutAdmin = () => {
     localStorage.removeItem('admin_token');
     localStorage.removeItem('admin_data');
