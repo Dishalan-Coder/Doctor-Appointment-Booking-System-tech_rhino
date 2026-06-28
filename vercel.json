@@ -1,4 +1,7 @@
 {
+  "env": {
+    "VITE_API_URL": "http://54.173.84.181:8000"
+  },
   "rewrites": [
     {
       "source": "/(.*)",
