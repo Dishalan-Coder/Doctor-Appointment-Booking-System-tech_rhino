@@ -1,5 +1,5 @@
 
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://54.173.84.181:8000';
+export const API_BASE_URL = 'http://54.173.84.181:8000';
 export const TIME_SLOTS = [
   '08:00', '08:30', '09:00', '09:30', '10:00', '10:30',
   '11:00', '11:30', '12:00', '12:30', '13:00', '13:30',
