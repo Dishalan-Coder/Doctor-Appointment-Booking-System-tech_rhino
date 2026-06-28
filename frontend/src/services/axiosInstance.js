@@ -1,9 +1,8 @@
-
 import axios from 'axios';
-import { API_BASE_URL } from '../utils/constants';
 
 const axiosInstance = axios.create({
-  baseURL: API_BASE_URL,
+  // 🎯 Vercel Environment Variables-ஐ முறியடிக்க நேரடியாக இங்கே AWS IP-யைக் கொடுத்துள்ளோம்:
+  baseURL: 'http://54.173.84.181:8000',
   headers: {
     'Content-Type': 'application/json',
   },
